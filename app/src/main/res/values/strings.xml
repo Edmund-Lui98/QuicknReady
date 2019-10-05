@@ -1,3 +1,11 @@
 <resources>
+    <!-- app name -->
     <string name="app_name">QuicknReady</string>
+
+    <!-- login activity -->
+    <string name="login">Login</string>
+    <string name="login_hint">enter username</string>
+    <string name="password">Password</string>
+    <string name="password_hint">enter password</string>
+
 </resources>

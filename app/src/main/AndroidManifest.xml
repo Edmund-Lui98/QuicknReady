@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MenuActivity"></activity>
+        <activity android:name=".MenuActivity">
+
+        </activity>
 
         <activity android:name=".QR_Scan"></activity>
 

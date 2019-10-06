@@ -46,6 +46,12 @@ public class camera_messengerActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    public void open_chat(View view){
+        Intent intent = new Intent(this, chatActivity.class);
+        startActivity(intent);
     }
 
     public void openQR_activity(){

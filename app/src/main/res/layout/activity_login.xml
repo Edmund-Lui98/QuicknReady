@@ -1,50 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_gravity="center"
+    android:background="@android:color/white"
     tools:context=".LoginActivity">
 
-    <TextView
-        android:id="@+id/loginText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/login" />
+    <View
+        android:id="@+id/decorationView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="300dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/qnr_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/login_hint"
-        android:inputType="textEmailAddress" />
 
-    <TextView
-        android:id="@+id/passwordText"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:text="@string/password" />
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/password_hint"
-        android:inputType="textPassword" />
+        <LinearLayout
+            android:id="@+id/credentialsSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center|left"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingTop="300dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClickLogin"
-        android:text="@string/login" />
+            <TextView
+                android:id="@+id/loginText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:text="login"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20dp" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClickRegister"
-        android:text="@string/register" />
-</LinearLayout>
+            <EditText
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textColorHighlight="#E0FFFF"
+                android:textColorLink="#E0FFFF"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/passwordText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:scrollbarSize="4dp"
+                android:textColorHighlight="#E0FFFF"
+                android:textColorLink="#E0FFFF"
+                android:textSize="15dp"
+                android:typeface="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:onClick="onClickLogin"
+                android:paddingBottom="10dp"
+                android:text="Login"
+                android:backgroundTint="#E0FFFF"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:onClick="onClickRegister"
+                android:text="Register"
+                android:backgroundTint="#E0FFFF"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

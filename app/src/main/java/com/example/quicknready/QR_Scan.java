@@ -6,6 +6,7 @@ import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -23,6 +24,7 @@ import java.io.IOException;
 
 public class QR_Scan extends AppCompatActivity {
     private static final int PERMISSION_REQUEST_CODE = 200;
+    private String redLobster = "Red Lobster";
     SurfaceView cameraView;
     CameraSource cameraSource;
     TextView textView;
@@ -108,6 +110,12 @@ public class QR_Scan extends AppCompatActivity {
                             vibrate.vibrate(1000);
                             //display decoded QR text
                             textView.setText(qrCodes.valueAt(0).displayValue);
+
+                            //checks for decrypted QR code to match menu and switch over to menu view
+                            if(textView.getText().toString().compareTo(redLobster)==0){
+                                Intent intent = new Intent(QR_Scan.this, MenuActivity.class);
+                                startActivity(intent);
+                            }
                         }
                     });
                 }

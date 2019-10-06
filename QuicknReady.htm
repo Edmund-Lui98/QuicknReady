@@ -1,0 +1,64 @@
+<! DOCTYPE html>
+<html>
+<img src="logo.jpg" alt="QuicknReady Logo" width="125" height="125"></style>
+<h1 style="font-size:250%">QuicknReady Orders</h1>
+
+<body style="font-family:cambria;text-align:center">
+<style>table, th, td {border: 0.5px solid black}</style>
+
+<table align="center";
+       style="table-layout:fixed; width:90%; text-align:center; width:90%; font-size:150%">
+    <tr style="background-color:#4EE2EC;width:25%">
+	<th>Table Number</th>
+	<th>Order</th>
+	<th>Quantity</th>
+	<th>Comments</th>
+	<th>Complete?</th>
+    </tr>
+    <tr style="width:25%;">
+	<td>1</td>
+	<td>Fish & Chips</td>
+	<td>1</td>
+	<td>Gluten-free</td>
+	<td><button type="button">Yes</button>
+    </tr>
+    <tr style="background-color:#E0FFFF;width:25%">
+	<td>2</td>
+	<td>Steak</td>
+	<td>2</td>
+	<td>N/A</td>
+	<td><button type="button">Yes</button>
+    </tr>
+    <tr style="width:25%;">
+	<td>3</td>
+	<td>Lobster</td>
+	<td>1</td>
+	<td>Keto</td>
+	<td><button type="button">Yes</button>
+    </tr>
+    <tr style="background-color:#E0FFFF;width:25%">
+	<td>4</td>
+	<td>Burger & Fries</td>
+	<td>2</td>
+	<td>Vegan</td>
+	<td><button type="button">Yes</button>
+</table>
+
+<script>
+
+var rootRef = firebase.database().ref().child("Users");
+
+rootRef.on("child_added", snap=> {
+    alert(snap.val());					#when object is returned
+
+    var num = snap.child("Table Number").val()		#retrieve value of cell
+    var order = snap.child("Order").val()
+    var quantity = snap.child("Quantity").val()
+    var comments = snap.child("Comments").val()
+
+    $("#table_body").append("<tr><td>" + num + "</td><td>" + order + "</td><td>" + quantity + "</td><td>" + comments 
+"</td><td></td></tr>");
+}
+
+</script>
+</html>

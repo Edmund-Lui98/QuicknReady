@@ -19,7 +19,10 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+        //added maven dependency for vision api
+        maven() {
+            url "https://maven.google.com"
+        }
     }
 }
 

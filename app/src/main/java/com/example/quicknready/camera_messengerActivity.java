@@ -3,6 +3,7 @@ package com.example.quicknready;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
@@ -25,9 +26,18 @@ public class camera_messengerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera_messenger);
 
-        Button btn = (Button) findViewById(R.id.button);
+        Button cameraBtn = findViewById(R.id.camera);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        cameraBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openQR_activity();
+            }
+        });
+
+        Button scanBtn = (Button) findViewById(R.id.scan);
+
+        scanBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //loads image puppy.png into myImageView using android Bitmap
@@ -56,6 +66,11 @@ public class camera_messengerActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void openQR_activity(){
+        Intent intent = new Intent(this, QR_Scan.class);
+        startActivity(intent);
     }
 
 }

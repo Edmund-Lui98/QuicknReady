@@ -8,11 +8,13 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.gms.vision.CameraSource;
@@ -22,6 +24,8 @@ import com.google.android.gms.vision.barcode.BarcodeDetector;
 
 import java.io.IOException;
 
+import static java.lang.Thread.sleep;
+
 public class QR_Scan extends AppCompatActivity {
     private static final int PERMISSION_REQUEST_CODE = 200;
     private String redLobster = "Red Lobster";
@@ -29,6 +33,7 @@ public class QR_Scan extends AppCompatActivity {
     CameraSource cameraSource;
     TextView textView;
     BarcodeDetector barcodeDetector;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,8 +118,14 @@ public class QR_Scan extends AppCompatActivity {
 
                             //checks for decrypted QR code to match menu and switch over to menu view
                             if(textView.getText().toString().compareTo(redLobster)==0){
+                                //short delay to prevent opening of multiple instances
                                 Intent intent = new Intent(QR_Scan.this, MenuActivity.class);
                                 startActivity(intent);
+                                try {
+                                    sleep(2000);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
                             }
                         }
                     });

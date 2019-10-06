@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="casual"
         android:text="Red Lobster "
+        android:textColor="#4EE2EC"
         android:textSize="36sp"
         android:textStyle="bold" />
 
@@ -31,7 +32,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Beef Slider" />
+                    android:text="Beef Slider"
+                    android:textColor="#4EE2EC" />
 
                 <ImageButton
                     android:layout_width="wrap_content"
@@ -50,7 +52,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Chicken Alfredo Pasta" />
+                    android:text="Chicken Alfredo Pasta"
+                    android:textColor="#4EE2EC" />
 
                 <ImageButton
                     android:layout_width="wrap_content"
@@ -69,7 +72,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Fish and Chips" />
+                    android:text="Fish and Chips"
+                    android:textColor="#4EE2EC" />
 
                 <ImageButton
                     android:layout_width="108dp"
@@ -87,7 +91,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Fish Tacos" />
+                android:text="Fish Tacos"
+                android:textColor="#4EE2EC" />
 
             <ImageButton
                 android:layout_width="109dp"
@@ -105,15 +110,17 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Surf and Turf" />
+                android:text="Surf and Turf"
+                android:textColor="#4EE2EC" />
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="300dp"
+                android:onClick="showPopup"
                 android:scaleType="fitXY"
-                android:src="@drawable/surf_and_turf"
 
+                android:src="@drawable/surf_and_turf"
                 android:text="Button" />
         </LinearLayout><LinearLayout
             android:layout_width="match_parent"
@@ -123,7 +130,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="12oz Steak" />
+                android:text="12oz Steak"
+                android:textColor="#4EE2EC" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -141,7 +149,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nashvilles Hot Shrimp" />
+                android:text="Nashvilles Hot Shrimp"
+                android:textColor="#4EE2EC" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -159,7 +168,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Spinach Dip" />
+                android:text="Spinach Dip"
+                android:textColor="#4EE2EC" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -177,7 +187,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lasagna" />
+                android:text="Lasagna"
+                android:textColor="#4EE2EC" />
 
             <ImageButton
                 android:layout_width="wrap_content"

@@ -35,12 +35,12 @@ public class LoginActivity extends AppCompatActivity {
 
         user = findViewById(R.id.login);
         pass = findViewById(R.id.password);
-        /*
+
         sharedPreferences = getSharedPreferences("loginref",MODE_PRIVATE);
         editor = sharedPreferences.edit();
 
         user.setText(sharedPreferences.getString("username",null));
-         */
+
 
     }
 
@@ -65,7 +65,7 @@ public class LoginActivity extends AppCompatActivity {
             toast_2.show();
 
         }
-        /*
+
 
         String username = user.getText().toString();
 
@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
         editor.putString("username",username);
         editor.commit();
 
-         */
+
 
 
     }

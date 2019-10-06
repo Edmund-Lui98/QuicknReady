@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QR_Scan">
+
+    <!--<TextView
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QR Activity" />-->
+
+    <!--where the camera would be displayed-->
+    <SurfaceView
+        android:layout_width="match_parent"
+        android:layout_height="440dp"
+        android:id="@+id/cameraPreview"
+        />
+
+    <!--where the affirmation would be displayed-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cameraText"
+        android:layout_below="@+id/cameraPreview"
+        android:layout_marginTop="30dp"
+        android:text="Point the Camera to the QR Code"
+        android:textSize="20sp"
+        android:gravity="center"
+        />
+
+</RelativeLayout>

@@ -28,12 +28,14 @@ public class camera_messengerActivity extends AppCompatActivity {
 
         Button cameraBtn = findViewById(R.id.camera);
 
+        //on click changes to QR Scanner
         cameraBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openQR_activity();
             }
         });
+
 
         Button scanBtn = (Button) findViewById(R.id.scan);
 
@@ -65,6 +67,7 @@ public class camera_messengerActivity extends AppCompatActivity {
 
             }
         });
+     
 
     }
 

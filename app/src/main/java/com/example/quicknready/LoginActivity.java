@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -23,6 +24,8 @@ public class LoginActivity extends AppCompatActivity {
 
     FirebaseAuth mAuth;
     EditText user, pass;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
 
     @Override
@@ -33,7 +36,10 @@ public class LoginActivity extends AppCompatActivity {
         user = findViewById(R.id.login);
         pass = findViewById(R.id.password);
 
+        sharedPreferences = getSharedPreferences("loginref",MODE_PRIVATE);
+        editor = sharedPreferences.edit();
 
+        user.setText(sharedPreferences.getString("username",null));
 
 
     }
@@ -54,7 +60,14 @@ public class LoginActivity extends AppCompatActivity {
         } else {
             Toast toast_2 = Toast.makeText(getApplicationContext(), "Please Fill up the username and password fields before.", Toast.LENGTH_SHORT);
             toast_2.show();
+
         }
+        String username = user.getText().toString();
+
+        editor.putBoolean("savelogin",true);
+        editor.putString("username",username);
+        editor.commit();
+
 
     }
 

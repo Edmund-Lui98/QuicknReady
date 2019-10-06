@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
@@ -7,36 +7,115 @@
     android:layout_height="match_parent"
     tools:context=".camera_messengerActivity">
 
-
-    <RelativeLayout
+        <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="100dp"
         android:orientation="vertical">
-
-        <TextView android:text=""
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtContent"/>
-        <Button
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
+            />
+        <TextView
+            android:text="Chat with Edmund"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="open_chat"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="280dp"
+            android:src = "@drawable/edmund"
+            />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical">
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/camera"
-            android:text="To Camera"/>
-
+            />
+        <TextView
+            android:text="Chat with Jody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="open_chat"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="280dp"
+            android:src = "@drawable/jody"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:text="Chat with Brian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="open_chat"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="280dp"
+            android:src = "@drawable/brianpng"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imgview"/>
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
+        <TextView
+            android:text="Chat with Jimmy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ImageButton
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="open_chat"
-            android:text="Button" />
-    </RelativeLayout>
+            android:scaleType="fitXY"
+            android:layout_marginLeft="280dp"
+            android:src = "@drawable/jimmy"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:text="Chat with Ruby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="open_chat"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="280dp"
+            android:src = "@drawable/ruby"
+            />
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/camera"
+        android:text="to Camera"/>
 
-
-</RelativeLayout>
+</LinearLayout>

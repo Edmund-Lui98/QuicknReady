@@ -39,6 +39,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onClickLogin(View view) {
+        mAuth = FirebaseAuth.getInstance();
         if (user.length() > 0 && pass.length() > 0) {
             mAuth.signInWithEmailAndPassword(user.getText().toString(), pass.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override

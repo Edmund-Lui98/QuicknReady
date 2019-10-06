@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -21,6 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     EditText user, pass;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
         pass = findViewById(R.id.password);
 
         mAuth = FirebaseAuth.getInstance();
+
 
     }
 
@@ -53,26 +56,27 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void logIn() {
-        Intent myIntent = new Intent(this, MessengerActivity.class);
+        Intent myIntent = new Intent(this, camera_messengerActivity.class);
         this.startActivity(myIntent);
     }
 
-    public void onClickRegister(View view) {
-        if (user.length() > 0 && pass.length() > 0) {
+    public void onClickRegister(View view){
+        if(user.length()>0 && pass.length()>0){
             mAuth.createUserWithEmailAndPassword(user.getText().toString(), pass.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()) {
+                    if (task.isSuccessful()){
                         FirebaseDatabase.getInstance().getReference().child("users").child(task.getResult().getUser().getUid()).setValue("Empty");
                         logIn();
-                    } else {
-                        Toast toast = Toast.makeText(getApplicationContext(), "Invalid Email or Password. Please try again.", Toast.LENGTH_SHORT);
+                    }
+                    else {
+                        Toast toast = Toast.makeText(getApplicationContext(), "Registration unsuccessful. Invalid Email or Password. Please try again.", Toast.LENGTH_SHORT);
                         toast.show();
                     }
                 }
             });
-        } else {
-            Toast toast_2 = Toast.makeText(getApplicationContext(), "Please Fill up the username and password fields before.", Toast.LENGTH_SHORT);
+        }else {
+            Toast toast_2 = Toast.makeText(getApplicationContext(), "Please Fill up the username and password fields before.",Toast.LENGTH_SHORT);
             toast_2.show();
         }
 

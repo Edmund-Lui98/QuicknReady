@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "744622551424",
+    "firebase_url": "https://quicknready-f829e.firebaseio.com",
+    "project_id": "quicknready-f829e",
+    "storage_bucket": "quicknready-f829e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744622551424:android:b7dda7ef6e9cb6f62bd165",
+        "android_client_info": {
+          "package_name": "com.example.quicknready"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744622551424-k7fquoolfbucs93vc0mjtq0gpesocbhc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.quicknready",
+            "certificate_hash": "203adc08ff70a9a88d17cbcfdbd41f46425f2998"
+          }
+        },
+        {
+          "client_id": "744622551424-id2e57oapad97ma1s8aklu0gamfi84fu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8zD8cF90neTLgmmAxmIywD2bJy1fG3_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744622551424-id2e57oapad97ma1s8aklu0gamfi84fu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

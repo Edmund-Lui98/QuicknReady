@@ -36,39 +36,6 @@ public class camera_messengerActivity extends AppCompatActivity {
             }
         });
 
-
-        Button scanBtn = (Button) findViewById(R.id.scan);
-
-        scanBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //loads  image puppy.png into myImageView using android Bitmap
-                ImageView myImageView = (ImageView) findViewById(R.id.imgview);
-                Bitmap myBitmap = BitmapFactory.decodeResource(
-                        getApplicationContext().getResources(),
-                        R.drawable.puppy);
-                myImageView.setImageBitmap(myBitmap);
-
-
-                //set up barcode detector to look for QR codes/data matrices
-                BarcodeDetector detector =
-                        new BarcodeDetector.Builder(getApplicationContext())
-                                .setBarcodeFormats(Barcode.DATA_MATRIX | Barcode.QR_CODE)
-                                .build();
-
-                //detect barcode
-                Frame frame = new Frame.Builder().setBitmap(myBitmap).build();
-                SparseArray<Barcode> barcodes = detector.detect(frame);
-
-                //decodes barcode
-                Barcode thisCode = barcodes.valueAt(0);
-                TextView txtView = (TextView) findViewById(R.id.txtContent);
-                txtView.setText(thisCode.rawValue);
-
-            }
-        });
-     
-
     }
 
     public void openQR_activity(){

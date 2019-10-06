@@ -35,16 +35,18 @@ public class LoginActivity extends AppCompatActivity {
 
         user = findViewById(R.id.login);
         pass = findViewById(R.id.password);
-
+        /*
         sharedPreferences = getSharedPreferences("loginref",MODE_PRIVATE);
         editor = sharedPreferences.edit();
 
         user.setText(sharedPreferences.getString("username",null));
-
+         */
 
     }
 
     public void onClickLogin(View view) {
+        mAuth = FirebaseAuth.getInstance();
+
         if (user.length() > 0 && pass.length() > 0) {
             mAuth.signInWithEmailAndPassword(user.getText().toString(), pass.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
@@ -62,11 +64,15 @@ public class LoginActivity extends AppCompatActivity {
             toast_2.show();
 
         }
+        /*
+
         String username = user.getText().toString();
 
         editor.putBoolean("savelogin",true);
         editor.putString("username",username);
         editor.commit();
+
+         */
 
 
     }

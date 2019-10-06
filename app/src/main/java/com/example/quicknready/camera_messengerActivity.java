@@ -40,7 +40,7 @@ public class camera_messengerActivity extends AppCompatActivity {
         scanBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //loads image puppy.png into myImageView using android Bitmap
+                //loads  image puppy.png into myImageView using android Bitmap
                 ImageView myImageView = (ImageView) findViewById(R.id.imgview);
                 Bitmap myBitmap = BitmapFactory.decodeResource(
                         getApplicationContext().getResources(),
